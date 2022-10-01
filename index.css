@@ -1,0 +1,197 @@
+/* DOCUMENT AND BODY STRUCTURE */
+
+* {
+    padding:0;
+    margin:0;
+    
+}
+
+body {
+    
+    height:100vh;
+    font-family: Roboto;
+}
+
+/* GRID STRUCTURE */
+
+.main {
+    display: grid; 
+    grid-template-columns: 2.9fr; 
+    grid-template-rows: 0.4fr 1.3fr 1.5fr 0.4fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "title"
+      "img-div"
+      "tribute-info-container"
+      "footer"; 
+    width: 100%; 
+    height: 140%; 
+  }
+
+  /* TITLE SECTION */
+  
+  .title {
+  background-color:lightgrey;
+    grid-area: title;
+    width: 100%;
+    height: 100%;
+
+  }
+
+  #title {
+      display: flex;
+      margin:0 auto;
+      align-items: center;
+      top:20px;
+      position: relative;
+      justify-content: center;
+  }
+
+
+#subtitle {
+    display: flex;
+    margin:0 auto;
+    align-items: center;
+    position:relative;
+    top:35px;
+    justify-content: center;
+}
+
+/* IMAGE SECTION */
+
+  .img-div { 
+      
+     grid-area: img-div;
+     width: 100%;
+     height: 100%;
+}
+
+#img-div {
+    position:relative;
+    top:15px;
+    width:100%;
+    height:100%;
+}
+
+#image {
+    max-width:100%;
+    display:flex;
+    margin:0 auto;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#img-caption {
+    display:flex;
+    margin:0 auto;
+    position:relative;
+    top:10px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* BIOGRAPHY SECTION */  
+
+
+  .tribute-info-container {
+    grid-area: tribute-info-container; 
+}
+
+#tribute-info {
+
+    width:50%;
+    height:50%;
+    position: relative;
+    top:90px;
+    display: flex;
+    margin:0 auto;
+    align-content: center;
+    font-size: 18px;
+}
+
+
+li {
+    list-style: none;
+    padding:8px;
+}
+
+/* TRIBUTE-INFO-SECTION */
+  
+  .footer {   
+    grid-area: footer; 
+
+}
+
+#tribute-link {
+    display:flex;
+    margin:0 auto;
+justify-content: center;
+align-items: center;
+
+
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width:500px) {
+    .main {
+        display: grid; 
+        grid-template-columns: 1.2fr; 
+        grid-template-rows: 1.2fr 1fr 1fr 1.2fr; 
+        gap: 0px 0px; 
+        grid-template-areas: 
+          "title"
+          "img-div"
+          "tribute-info-container"
+          "footer"; 
+        width: 100%; 
+        height: 100%; 
+      }
+    .title {
+        height:120%;
+    }
+      #title {
+        font-size: 13px;
+        top:1px;
+        position: relative;
+    }
+    #subtitle {
+        font-size: 11px;
+        top:2px;
+        position: relative;
+    }
+
+    #tribute-info{ 
+    top:40px;
+        position: relative;
+        display: flex;
+width:100%;
+height:100%;
+    }
+
+
+    li {
+        padding-top:5px;
+        list-style: none;
+        padding-left:8px;
+        padding-right:8px;
+        font-size:13px;
+        position: relative;
+        display: flex;
+    }
+
+    #tribute-link {
+        display:flex;
+        height:120%;
+        position:relative;
+        top:60px;
+        margin: 0 auto;
+        align-items:center;
+        justify-content: center;
+        font-size: 13px;
+        padding-left:5px;
+        padding-right:5px;
+    }
+}
+  
